@@ -1,0 +1,15 @@
+.topic1{
+    text-align: center;
+}
+.block{
+    background-color: blue;
+    text-align: center;
+}
+.inline{
+    background-color: brown;
+    text-align: center;
+    display: block;
+}
+.ul{
+    background-color: chocolate;
+}
