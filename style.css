@@ -1,0 +1,191 @@
+/* BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #050505;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* NEON ANIMATED BACKGROUND */
+.bg-animation {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(135deg, #0ff, #00f, #f0f, #f00);
+    background-size: 600% 600%;
+    animation: gradientMove 12s infinite;
+    opacity: 0.15;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* HEADER / NAVBAR */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(6px);
+    background: rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: cyan;
+    font-family: cursive;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: cyan;
+    text-shadow: 0 0 10px cyan;
+}
+
+/* SECTIONS GENERAL */
+.section {
+    padding: 150px 40px 100px;
+}
+
+/* FADE-UP ANIMATION */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* HOME TEXT */
+.typing-text {
+    font-size: 46px;
+    font-weight: bold;
+    color: cyan;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px cyan;
+}
+
+.subtitle {
+    color: #ccc;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+/* SOCIAL BUTTONS */
+.social a {
+    text-decoration: none;
+    padding: 10px 20px;
+    background: cyan;
+    color: #000;
+    border-radius: 6px;
+    margin: 5px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    background: white;
+}
+
+/* BLOG CARDS */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.blog-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-left: 4px solid cyan;
+    padding: 20px;
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 20px cyan;
+}
+
+/* CONTACT FORM */
+form {
+    max-width: 400px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid #333;
+    padding: 12px;
+    margin: 10px 0;
+    color: #fff;
+    border-radius: 6px;
+}
+
+form button {
+    width: 100%;
+    padding: 12px;
+    background: cyan;
+    border: none;
+    color: #000;
+    font-size: 18px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: white;
+}
+.small-footer {
+  background: #111;
+  color: #ccc;
+  text-align: center;
+  padding: 15px 20px;
+  border-top: 1px solid rgba(0,255,255,0.1);
+  font-size: 14px;
+}
+
+.small-footer .small-social {
+  margin-top: 5px;
+}
+
+.small-footer .small-social a {
+  margin: 0 5px;
+  color: cyan;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.small-footer .small-social a:hover {
+  color: #fff;
+}
